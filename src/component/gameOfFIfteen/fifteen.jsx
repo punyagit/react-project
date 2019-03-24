@@ -50,11 +50,12 @@ class Fifteen extends Component {
 
 
         return (
-            <div>
+            <div id="main">
                 < p><a href="https://github.com/PunyaChapagain/react-project.git" target="blank">Github </a></p>
+
                 <h1> Game of Fifteen</h1>
                 <h1>{this.state.decison}</h1>
-                <div className="container">
+                <div className="container1">
 
                     {
                         this.state.array.map((number, key) => {

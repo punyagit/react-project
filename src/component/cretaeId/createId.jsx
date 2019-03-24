@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DetailForm from './form'
 import ShowId from './showId'
 import '../../styles/createId.css'
+
+
 class CreateId extends Component {
 
     state = {
@@ -26,18 +28,17 @@ class CreateId extends Component {
 
     }
 
-
-
-
-
-
     render() {
 
 
         return (
-            <div>
-                <DetailForm value={this.state.detail} onChange={this.handleChange} />
-                <ShowId value={this.state.detail} />
+            <div id="container">
+                <div className="detail-fom">
+                    <DetailForm value={this.state.detail} onChange={this.handleChange} />
+                </div>
+                <div className="deatil-view">
+                    <ShowId value={this.state.detail} />
+                </div>
             </div>);
     }
 }
