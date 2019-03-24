@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap'
-//import * as ReactBootstrap from 'react-bootstrap'
+import DetailForm from './form'
+import ShowId from './showId'
 import '../../styles/createId.css'
 class CreateId extends Component {
+
     state = {
-        details: {
+        detail: {
             cardNo: "",
             liscenseNo: "",
             name: "",
@@ -15,19 +16,28 @@ class CreateId extends Component {
             dateOfBirth: "",
             expiryDate: "",
         }
+
     }
+
+    handleChange = e => {
+        const detail = { ...this.state.detail }
+        detail[e.currentTarget.name] = e.currentTarget.value
+        this.setState({ detail })
+
+    }
+
+
+
+
+
+
     render() {
+
+
         return (
             <div>
-                <Form>
-
-                    <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input id="name" type="text" className="form-control" autoFocus />
-                    </div>
-
-                </Form>
-
+                <DetailForm value={this.state.detail} onChange={this.handleChange} />
+                <ShowId value={this.state.detail} />
             </div>);
     }
 }
