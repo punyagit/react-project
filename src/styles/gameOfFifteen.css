@@ -1,0 +1,25 @@
+.container {
+    margin-top: 100px;
+    background-color: yellowgreen;
+    border: 3px solid black;
+    width: 264px;
+  }
+  
+  .num {
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    background-color: green;
+    border: 2px solid black;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width:62px;
+    height:50px;
+    color: white;
+  
+  }
+  
+  .num0{
+    background-color: white;
+  }
+  
