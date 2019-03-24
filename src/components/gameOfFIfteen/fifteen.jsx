@@ -51,7 +51,7 @@ class Fifteen extends Component {
 
         return (
             <div>
-                < p><a href="https://github.com/PunyaChapagain/react-project/tree/master/game-fifteen" target="blank">Github </a></p>
+                < p><a href="https://github.com/PunyaChapagain/react-project.git" target="blank">Github </a></p>
                 <h1> Game of Fifteen</h1>
                 <h1>{this.state.decison}</h1>
                 <div className="container">

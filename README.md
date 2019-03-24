@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Game of Fifteen
+## Multiple react project [View Project in Browser](https://app.punyadev.com).
 
-Game of fifteen made in react
+##  1. Game of Fifteen
+    The typical game of fifteen made in react. 
 
