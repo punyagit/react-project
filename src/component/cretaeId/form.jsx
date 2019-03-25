@@ -27,8 +27,14 @@ const DetailForm = ({ onChange, value }) => {
             </div>
             <div className="form-group">
                 <label htmlFor="state">State</label>
-                <input id="state" type="text" className="form-control"
-                    onChange={onChange} value={state} name="state" />
+                <select className="custom-select" id="state" name="state" onChange={onChange}>
+                    <option disabled > Choose..</option>
+                    <option value="New South Wales,">NSW</option>
+                    <option value="2">QLD</option>
+                    <option value="3">VIC</option>
+                </select>
+                {/* <input id="state" type="text" className="form-control"
+                    onChange={onChange} value={state} name="state" /> */}
             </div>
             <button className="btn btn-primary">Submit</button>
 
