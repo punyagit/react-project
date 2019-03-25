@@ -9,6 +9,10 @@ form{
 
 
 /* css for show id file  */
+
+span{
+    display: block;
+}
 #show-id{
     margin: 40px;
     width:340px;
@@ -33,11 +37,13 @@ form{
     
 }
 
-.address-span{
+.top-span{
     display:block;
     padding:0px;
     height: 15px;
 }
+
+
 
 .main-show{
     display:flex;
@@ -46,6 +52,11 @@ form{
 .left-side {
     margin-left:2px;
     width: 200px;
+}
+
+.span-address{
+    display:block;
+    margin-top: 30px;
 }
 
 
