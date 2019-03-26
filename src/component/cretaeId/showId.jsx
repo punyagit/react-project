@@ -3,14 +3,15 @@ import React from 'react';
 
 const ShowId = ({ value }) => {
     const add = {
-        NSW: "New South Wales",
-        QLD: "Queensland",
-        VIC: "Victoria",
-        TAS: "Tasmania"
-
-
+        NSW: "New South Wales,",
+        QLD: "Queensland,",
+        VIC: "Victoria,",
+        TAS: "Tasmania,",
+        WA: "Western Australia,",
+        SA: "South Australia,"
     }
     let stateName = value.state
+    console.log(value.year)
 
 
     return (
@@ -26,9 +27,9 @@ const ShowId = ({ value }) => {
                 <div className="left-side">
                     {value.name}
                     <span className="span-address">
-                        <span>{value.unitNo}</span>
+                        <span>{(value.unitNo === "") ? "" : `UNIT ${value.unitNo}`}</span>
                         <span>{value.address}</span>
-                        <span>{value.city} {value.state}</span>
+                        <span>{value.city} {value.state} {value.postCode}</span>
 
                     </span>
                 </div>

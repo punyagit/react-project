@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const DetailForm = ({ onChange, value }) => {
-    const { name, unitNo, address, city, state } = value
+    const { name, unitNo, address, city, postCode } = value
     return (<div>
         <form>
             <div className="form-group">
@@ -32,9 +32,25 @@ const DetailForm = ({ onChange, value }) => {
                     <option>NSW</option>
                     <option>QLD</option>
                     <option>VIC</option>
+                    <option>TAS</option>
+                    <option>WA</option>
+                    <option>SA</option>
                 </select>
-                {/* <input id="state" type="text" className="form-control"
-                    onChange={onChange} value={state} name="state" /> */}
+            </div>
+            <div className="form-group">
+                <label htmlFor="postCode">Post Code</label>
+                <input id="postCode" type="text" className="form-control"
+                    onChange={onChange} value={postCode} name="postCode" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="year">Expiry Date</label>
+                <select className="custom-select" id="year" name="year" onChange={onChange}>
+                    <option defaultValue>Choose..</option>
+                    <option value="1">1 Year</option>
+                    <option value="3">3 Year</option>
+                    <option value="5">5 year</option>
+
+                </select>
             </div>
             <button className="btn btn-primary">Submit</button>
 

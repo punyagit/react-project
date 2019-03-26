@@ -15,6 +15,7 @@ class CreateId extends Component {
             address: "",
             city: "",
             state: "",
+            postCode: "",
             dateOfBirth: "",
             expiryDate: "",
         }
