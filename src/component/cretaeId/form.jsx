@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DetailForm = ({ onChange, value }) => {
+const DetailForm = ({ onChange, value, setRef }) => {
     const { name, unitNo, address, city, postCode, disable, disable1 } = value
 
 
@@ -59,9 +59,10 @@ const DetailForm = ({ onChange, value }) => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="year">Expiry Date</label>
-                    <select defaultValue="How many Year" className="custom-select" id="year" name="expiryDate" onChange={onChange}>
-                        <option disabled>How many Year</option>
-                        <option >1 Year</option>
+                    <select className="custom-select" ref={setRef}
+                        id="year" name="expiryDate" onChange={onChange}>
+                        <option value="red" >How Many Year</option>
+                        <option value="1">1 Year</option>
 
                         <option disabled={disable1} >2 Year</option>
                         <option disabled={disable}>5 year</option>

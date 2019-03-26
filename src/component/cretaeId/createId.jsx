@@ -16,22 +16,25 @@ class CreateId extends Component {
             city: "",
             postCode: "",
             dateOfBirth: "",
-            expiryDate: "",
+            expiryDate: "How Many Year",
             disable: false,
             disable1: false
+
 
         }
 
     }
 
-
+    myRef = React.createRef()
 
     handleChange = e => {
+
         const detail = { ...this.state.detail }
         detail[e.currentTarget.name] = e.currentTarget.value
 
         this.handleOptionChange(e, detail)
         this.setState({ detail })
+
 
 
     }
@@ -40,35 +43,39 @@ class CreateId extends Component {
         if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P")) {
             obj.disable = true;
             obj.disable1 = true;
-            obj.expiryDate = "How many Year"
+            obj.expiryDate = ""
+            console.log(this.myRef.current.value)
+
 
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P2")) {
 
             obj.disable = true;
             obj.disable1 = false;
-            obj.expiryDate = "How many Year"
+            obj.expiryDate = ""
+
 
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "Full")) {
-            obj.expiryDate = "How many Year"
-        }
-        else {
             obj.disable = false;
             obj.disable1 = false;
+            obj.expiryDate = ""
 
         }
+
 
 
     }
 
+
     render() {
 
-
         return (
+
             <div id="container">
+
                 <div className="detail-fom">
-                    <DetailForm value={this.state.detail} onChange={this.handleChange} />
+                    <DetailForm setRef={this.myRef} value={this.state.detail} onChange={this.handleChange} />
                 </div>
                 <div className="deatil-view">
                     <ShowId value={this.state.detail} />

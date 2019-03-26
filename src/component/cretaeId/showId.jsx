@@ -34,7 +34,7 @@ const ShowId = ({ value }) => {
                     </span>
                 </div>
                 <div calss="right-side">
-                    {(value.expiryDate === "") ? "" : newExpiryDate}
+                    {(isNaN(parseInt(value.expiryDate))) ? "" : newExpiryDate}
 
                 </div>
 
