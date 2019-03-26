@@ -28,10 +28,10 @@ const DetailForm = ({ onChange, value }) => {
             <div className="form-group">
                 <label htmlFor="state">State</label>
                 <select className="custom-select" id="state" name="state" onChange={onChange}>
-                    <option disabled > Choose..</option>
-                    <option value="New South Wales,">NSW</option>
-                    <option value="2">QLD</option>
-                    <option value="3">VIC</option>
+                    <option defaultValue value=""  > Choose..</option>
+                    <option>NSW</option>
+                    <option>QLD</option>
+                    <option>VIC</option>
                 </select>
                 {/* <input id="state" type="text" className="form-control"
                     onChange={onChange} value={state} name="state" /> */}

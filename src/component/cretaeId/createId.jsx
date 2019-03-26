@@ -22,7 +22,6 @@ class CreateId extends Component {
     }
 
     handleChange = e => {
-        console.log(e.currentTarget.name)
         const detail = { ...this.state.detail }
         detail[e.currentTarget.name] = e.currentTarget.value
         this.setState({ detail })
