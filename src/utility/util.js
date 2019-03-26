@@ -15,6 +15,14 @@ const Utils = (function () {
             }
             return newArray
 
+        },
+
+
+        expiryDate: function (year) {
+
+            let date = new Date()
+            let expiryDate = `${date.getDate()} ${date.getMonth() + 1} ${date.getFullYear() + year}`
+            return expiryDate
         }
 
     }

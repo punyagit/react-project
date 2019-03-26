@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Util from '../../utility/util'
 
 const ShowId = ({ value }) => {
     const add = {
@@ -11,7 +11,7 @@ const ShowId = ({ value }) => {
         SA: "South Australia,"
     }
     let stateName = value.state
-    console.log(value.year)
+    let newExpiryDate = Util.expiryDate(parseInt(value.expiryDate))
 
 
     return (
@@ -34,6 +34,7 @@ const ShowId = ({ value }) => {
                     </span>
                 </div>
                 <div calss="right-side">
+                    {(value.expiryDate === "") ? "" : newExpiryDate}
 
                 </div>
 

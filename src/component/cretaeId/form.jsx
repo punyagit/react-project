@@ -44,7 +44,7 @@ const DetailForm = ({ onChange, value }) => {
             </div>
             <div className="form-group">
                 <label htmlFor="year">Expiry Date</label>
-                <select className="custom-select" id="year" name="year" onChange={onChange}>
+                <select className="custom-select" id="year" name="expiryDate" onChange={onChange}>
                     <option defaultValue>Choose..</option>
                     <option value="1">1 Year</option>
                     <option value="3">3 Year</option>
