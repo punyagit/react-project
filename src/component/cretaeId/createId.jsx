@@ -19,10 +19,7 @@ class CreateId extends Component {
             expiryDate: "How Many Year",
             disable: false,
             disable1: false
-
-
         }
-
     }
 
     myRef = React.createRef()
@@ -35,8 +32,6 @@ class CreateId extends Component {
         this.handleOptionChange(e, detail)
         this.setState({ detail })
 
-
-
     }
 
     handleOptionChange = (e, obj) => {
@@ -44,30 +39,22 @@ class CreateId extends Component {
             obj.disable = true;
             obj.disable1 = true;
             obj.expiryDate = ""
-            console.log(this.myRef.current.value)
-
-
+            this.myRef.current.value = "red"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P2")) {
 
             obj.disable = true;
             obj.disable1 = false;
             obj.expiryDate = ""
-
-
+            this.myRef.current.value = "red"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "Full")) {
             obj.disable = false;
             obj.disable1 = false;
             obj.expiryDate = ""
-
+            this.myRef.current.value = "red"
         }
-
-
-
     }
-
-
     render() {
 
         return (
