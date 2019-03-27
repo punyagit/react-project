@@ -23,7 +23,7 @@ span{
     border: 1px solid black;
     background-image: url("./flower1.png");
     background-repeat: no-repeat;
-    background-position: 113px 70px;
+    background-position: 120px 70px;
    
     
 }
@@ -126,4 +126,21 @@ span{
     max-width:100px;
 }
 
+.date-birth{
+    position:fixed;
+    top: 235px;
+    margin-left:145px;
+}
+.birth-detail{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 7px;
+    
 
+}
+
+.span-birth{
+    font-size: 11px;
+    letter-spacing: -1px;
+    
+}

@@ -15,10 +15,12 @@ class CreateId extends Component {
             address: "",
             city: "",
             postCode: "",
-            dateOfBirth: "",
             expiryDate: "How Many Year",
             disable: false,
-            disable1: false
+            disable1: false,
+            day: "",
+            month: "",
+            year: ""
         }
     }
 

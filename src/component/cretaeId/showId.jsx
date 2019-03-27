@@ -41,6 +41,12 @@ const ShowId = ({ value }) => {
                         <span className="span-name1">Liscence Class</span>
                         <span className="span-class-no">C</span>
                     </div>
+                    <div className="date-birth">
+                        <span className="span-birth">Date Of Birth</span>
+                        <span className="birth-detail">
+                            {value.day} {value.month.slice(0, 3).toUpperCase()} {value.year}
+                        </span>
+                    </div>
                 </div>
                 <div className="right-side" >
                     <div className="rhs-date">
@@ -50,10 +56,11 @@ const ShowId = ({ value }) => {
                         </span>
 
                     </div>
-                    <div className="photo">
+
+                    <div className="photo" />
 
 
-                    </div>
+
                     <div className="rhs-date">
                         <span className="span-name">Expiry Date</span>
                         <span className="span-exp-card">

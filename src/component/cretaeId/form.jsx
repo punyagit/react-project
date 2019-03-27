@@ -2,7 +2,8 @@ import React from 'react';
 
 
 const DetailForm = ({ onChange, value, setRef }) => {
-    const { name, unitNo, address, city, postCode, disable, disable1, dateOfBirth } = value
+    const { name, unitNo, address, city, postCode, disable, disable1, day, year } = value
+
 
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -72,9 +73,9 @@ const DetailForm = ({ onChange, value, setRef }) => {
                 </div>
                 <label>Birthday</label>
                 <div>
-                    <input type="text" className="input-birthday" placeholder="Day"></input>
-                    <input type="text" className="input-birthday" placeholder="Year"></input>
-                    <select onChange={onChange} defaultValue="choose">
+                    <input type="text" value={day} className="input-birthday" placeholder="Day" onChange={onChange} name="day" />
+                    <input type="text" value={year} className="input-birthday" placeholder="Year" onChange={onChange} name="year" />
+                    <select onChange={onChange} defaultValue="choose" name="month">
                         <option disabled value="choose">Choose Month</option>
                         {months.map((month, key) => {
                             return <option key={key}>{month}</option>
