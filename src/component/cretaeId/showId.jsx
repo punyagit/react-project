@@ -39,7 +39,7 @@ const ShowId = ({ value }) => {
                     <div className="rhs-date">
                         <span className="span-name">Card Number</span>
                         <span className="span-exp-card">
-                            124568
+                            2 045 322 117
                         </span>
 
                     </div>

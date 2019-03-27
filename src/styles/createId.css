@@ -17,13 +17,16 @@ span{
     margin: 40px;
     width:342px;
     height: 229px;
+    border-radius: 10px;
     border: 1px solid black;
     
 }
 
 .top{
+    border-radius: 10px 10px 0px 0px;
     height: 39px;
     text-align: center;
+    margin-bottom: 3px;
 }
 
 .head-span{
@@ -73,7 +76,7 @@ span{
     float: right;
     text-align: center;
     width: 95px;
-    height:28px;
+    height:25px;
     background-color: #9ab6e2;
     
 }
@@ -81,7 +84,7 @@ span{
     float:right;
    margin-right:4px;
     width: 90px;
-    height: 125px;
+    height: 130px;
     background-color:#e5e7ea;
 }
 

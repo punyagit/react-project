@@ -71,7 +71,7 @@ const DetailForm = ({ onChange, value, setRef }) => {
                 </div>
 
 
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary">Take Photo</button>
 
             </form>
 
