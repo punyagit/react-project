@@ -6,7 +6,9 @@ form{
     display: flex;
 }
 
-
+.input-birthday{
+    width:65px;
+}
 
 /* css for show id file  */
 
@@ -59,7 +61,7 @@ span{
 }
 
 .left-side {
-    margin-left:2px;
+    margin-left:3px;
     width: 200px;
 }
 
@@ -81,9 +83,11 @@ span{
     font-size: 11px;
     letter-spacing: -1px;
 } 
-.name1{
-    top:125px;
+.position-detail{
+    position: fixed;
+    top:170px;
 }
+
 .span-class-no{
     font-weight: bold;
     font-size: 12px;
