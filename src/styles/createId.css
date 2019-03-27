@@ -19,8 +19,13 @@ span{
     height: 229px;
     border-radius: 10px;
     border: 1px solid black;
+    background-image: url("./flower1.png");
+    background-repeat: no-repeat;
+    background-position: 113px 70px;
+   
     
 }
+
 
 .top{
     border-radius: 10px 10px 0px 0px;
@@ -28,9 +33,12 @@ span{
     text-align: center;
     margin-bottom: 3px;
 }
+.span-your-name{
+    font-weight: 600;
+
+}
 
 .head-span{
-    display:block;
     padding:0px;
     margin:0px;
     font-weight: bold;
@@ -40,7 +48,6 @@ span{
 }
 
 .top-span{
-    display:block;
     padding:0px;
     height: 15px;
 }
@@ -59,16 +66,37 @@ span{
 .span-address{
     display:block;
     margin-top: 30px;
+    letter-spacing: -1px;
+    font-weight: 550;
+    line-height: 17px;
     
 }
 .span-name{
     font-size: 10px;
-    font-weight: normal;
+    float: right;
+    margin-right: 5px;
+}
+.span-name1{
+    margin-top:5px;
+    font-size: 11px;
+    letter-spacing: -1px;
+} 
+.name1{
+    top:125px;
+}
+.span-class-no{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 7px;
+    letter-spacing: 1px;
 }
 .span-exp-card{
     font-weight: bold;
     font-size: 12px;
     line-height: 7px;
+    letter-spacing: -0.5px;
+    float: right;
+    margin-right: 5px;
 }
 
 .rhs-date{
@@ -89,7 +117,7 @@ span{
 }
 
 .right-side{
-    margin-left: 29px;
+    margin-left: 33px;
     float:right;
     max-width:100px;
 }
