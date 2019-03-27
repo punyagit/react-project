@@ -3,7 +3,6 @@ import DetailForm from './form'
 import ShowId from './showId'
 import '../../styles/createId.css'
 
-
 class CreateId extends Component {
 
     state = {

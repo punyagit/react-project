@@ -4,3 +4,28 @@
   
 }
 
+
+
+
+
+
+.videoLayer {
+  position:absolute;
+  top:0px;
+  
+  /* border:2px solid red; */
+  
+}
+
+.canvasLayer{
+  position:absolute;
+  top:0px;
+  border:2px solid red;
+  width: 643px;
+  height: 480px;
+  
+}
+
+
+
+
