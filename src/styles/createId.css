@@ -15,15 +15,14 @@ span{
 }
 #show-id{
     margin: 40px;
-    width:340px;
-    height: 227px;
+    width:342px;
+    height: 229px;
     border: 1px solid black;
     
 }
 
 .top{
-    height: 37px;
-    background-color: yellow;
+    height: 39px;
     text-align: center;
 }
 
@@ -57,6 +56,39 @@ span{
 .span-address{
     display:block;
     margin-top: 30px;
+    
+}
+.span-name{
+    font-size: 10px;
+    font-weight: normal;
+}
+.span-exp-card{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 7px;
+}
+
+.rhs-date{
+    float:left;    
+    float: right;
+    text-align: center;
+    width: 95px;
+    height:28px;
+    background-color: #9ab6e2;
+    
+}
+.photo{
+    float:right;
+   margin-right:4px;
+    width: 90px;
+    height: 125px;
+    background-color:#e5e7ea;
+}
+
+.right-side{
+    margin-left: 29px;
+    float:right;
+    max-width:100px;
 }
 
 

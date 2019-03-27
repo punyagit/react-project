@@ -19,9 +19,9 @@ const Utils = (function () {
 
 
         expiryDate: function (year) {
-
+            let month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
             let date = new Date()
-            let expiryDate = `${date.getDate()} ${date.getMonth() + 1} ${date.getFullYear() + year}`
+            let expiryDate = `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear() + year}`
             return expiryDate
         }
 

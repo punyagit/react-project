@@ -8,8 +8,8 @@ class CreateId extends Component {
 
     state = {
         detail: {
-            // cardNo: "",
-            // liscenseNo: "",
+
+            liscenseType: "Create Driver Liscense",
             name: "",
             unitNo: "",
             address: "",
@@ -28,30 +28,32 @@ class CreateId extends Component {
 
         const detail = { ...this.state.detail }
         detail[e.currentTarget.name] = e.currentTarget.value
-
         this.handleOptionChange(e, detail)
         this.setState({ detail })
 
     }
 
     handleOptionChange = (e, obj) => {
+
         if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P")) {
             obj.disable = true;
             obj.disable1 = true;
             obj.expiryDate = ""
+            obj.liscenseType = "Provisional Driver Liscense"
             this.myRef.current.value = "red"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P2")) {
-
             obj.disable = true;
             obj.disable1 = false;
             obj.expiryDate = ""
+            obj.liscenseType = "Provisional Driver Liscense"
             this.myRef.current.value = "red"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "Full")) {
             obj.disable = false;
             obj.disable1 = false;
             obj.expiryDate = ""
+            obj.liscenseType = "Driver Liscense"
             this.myRef.current.value = "red"
         }
     }

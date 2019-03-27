@@ -13,19 +13,21 @@ const ShowId = ({ value }) => {
     let stateName = value.state
     let newExpiryDate = Util.expiryDate(parseInt(value.expiryDate))
 
+    let color = (value.liscenseType === "Provisional Driver Liscense") ? "#ff6666" : "yellow"
+
 
     return (
 
-        < div id="show-id" >
+        < div id="show-id"  >
 
-            <div className="top">
-                <span className="head-span">Driver Liscense</span>
+            <div className="top" style={{ backgroundColor: color }}>
+                <span className="head-span" >{value.liscenseType}</span>
 
                 <span className="top-span">{add[stateName]} Australia</span>
             </div>
             <div className="main-show">
                 <div className="left-side">
-                    {value.name}
+                    <span>{value.name}</span>
                     <span className="span-address">
                         <span>{(value.unitNo === "") ? "" : `UNIT ${value.unitNo}`}</span>
                         <span>{value.address}</span>
@@ -33,10 +35,32 @@ const ShowId = ({ value }) => {
 
                     </span>
                 </div>
-                <div calss="right-side">
-                    {(isNaN(parseInt(value.expiryDate))) ? "" : newExpiryDate}
+                <div className="right-side" >
+                    <div className="rhs-date">
+                        <span className="span-name">Card Number</span>
+                        <span className="span-exp-card">
+                            124568
+                        </span>
+
+                    </div>
+                    <div className="photo">
+
+
+                    </div>
+                    <div className="rhs-date">
+                        <span className="span-name">Expiry Date</span>
+                        <span className="span-exp-card">
+                            {(isNaN(parseInt(value.expiryDate))) ? "" : newExpiryDate}
+                        </span>
+                    </div>
+
+
 
                 </div>
+
+
+
+
 
             </div>
 
