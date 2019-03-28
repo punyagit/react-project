@@ -6,11 +6,31 @@ form{
     display: flex;
 }
 
+.detail-view{
+    
+    /* display:flex; */
+    /* flex-direction: column; */
+}   
+.id-view{
+    display: block;
+    float:left;
+}
+
+.cam-view{
+    
+    display:blok;
+    float:left;
+
+    
+}
+
+/* css for Form.jsx //////////////////////////////////////////////////*/
+
 .input-birthday{
     width:65px;
 }
 
-/* css for show id file  */
+/* css for showid.jsx file //////////////////////////////////////////////// */
 
 span{
     display: block;

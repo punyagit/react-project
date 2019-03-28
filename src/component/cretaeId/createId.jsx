@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DetailForm from './form'
 import ShowId from './showId'
+import UseCam from '../common/useCam'
 import '../../styles/createId.css'
 
 class CreateId extends Component {
@@ -67,9 +68,18 @@ class CreateId extends Component {
                 <div className="detail-fom">
                     <DetailForm setRef={this.myRef} value={this.state.detail} onChange={this.handleChange} />
                 </div>
-                <div className="deatil-view">
-                    <ShowId value={this.state.detail} />
+                <div className="detail-view">
+                    <div className="id-view">
+                        <ShowId value={this.state.detail} />
+
+                    </div>
+                    <div className="cam-view">
+                        <UseCam />
+
+                    </div>
                 </div>
+
+
             </div>);
     }
 }
