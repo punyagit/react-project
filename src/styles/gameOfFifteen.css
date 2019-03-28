@@ -1,6 +1,7 @@
 
 #main{
   display: flex;
+  flex-direction: column;
   text-align: center;
   margin-left: 300px;
 }
@@ -11,6 +12,8 @@
     background-color: yellowgreen;
     border: 3px solid black;
     width: 254px;
+    min-width:254px;
+    max-height:200px;
   }
   
   .num {
