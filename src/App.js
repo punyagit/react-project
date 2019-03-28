@@ -6,8 +6,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Fifteen />
-        <CreateId />
+        <div>
+          <Fifteen />
+        </div>
+        <div>
+          <CreateId />
+
+        </div>
+
       </div>
     );
   }
