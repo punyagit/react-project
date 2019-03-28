@@ -1,47 +1,31 @@
 
 
 import React, { Component } from 'react'
-import '../../App.css'
 
-export default class UseCam extends Component {
+class UseCam extends Component {
 
-    componentDidMount(b) {
-
-
+    componentDidMount() {
         navigator.mediaDevices.getUserMedia = navigator.mediaDevices.getUserMedia ||
             navigator.mediaDevices.webkitGetUserMedia ||
             navigator.mediaDevices.mozGetUserMedia ||
             navigator.mediaDevices.msGetUserMedia
-
-
         if (navigator.mediaDevices.getUserMedia) {
 
             navigator.mediaDevices.getUserMedia({ video: true })
-
                 .then((stream) => {
                     let video = document.getElementById('myVideo')
                     video.srcObject = stream;
-                    // this.setState({ videoSrc: video.srcObject })
-
-
                 })
                 .catch(function (err) {
                     console.log(err)
-
                 });
         }
-
+    }
+    capturePicture = () => {
         let canvas = this.refs.canvasLayer
-        let video = document.getElementById('myVideo')
+        let video = this.refs.myVideo
         let context = canvas.getContext('2d')
-        document.getElementById('capture').addEventListener('click', function () {
-
-            context.drawImage(video, 0, 0, 90, 130);
-            var image = canvas.toDataURL("image/png")
-            //window.location.href = image;
-
-        })
-
+        context.drawImage(video, 0, 0, 90, 130);
     }
 
     render() {
@@ -51,7 +35,7 @@ export default class UseCam extends Component {
                     <div className="videoLayer">
                         <video loop autoPlay width="350" ref="myVideo" height="320" id="myVideo" preload="true" type="video/webm"></video>
                     </div>
-                    <button class="btn btn-success" id="capture"> Take Photo</button>
+                    <button class="btn btn-success" id="capture" onClick={this.capturePicture}> Take Photo</button>
                 </div>
                 <div>
                     <canvas ref="canvasLayer" id="canvasLayer" width="90" height="130" className="canvasLayer"></canvas>
@@ -62,3 +46,5 @@ export default class UseCam extends Component {
         )
     }
 }
+
+export default UseCam

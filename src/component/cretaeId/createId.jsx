@@ -9,7 +9,6 @@ class CreateId extends Component {
     state = {
         active: false,
         detail: {
-
             liscenseType: "Create Driver Liscense",
             name: "",
             unitNo: "",
@@ -47,21 +46,21 @@ class CreateId extends Component {
             obj.disable1 = true;
             obj.expiryDate = ""
             obj.liscenseType = "Provisional Driver Liscense"
-            this.myRef.current.value = "red"
+            this.myRef.current.value = "default"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "P2")) {
             obj.disable = true;
             obj.disable1 = false;
             obj.expiryDate = ""
             obj.liscenseType = "Provisional Driver Liscense"
-            this.myRef.current.value = "red"
+            this.myRef.current.value = "default"
         }
         else if ((e.currentTarget.name === "liscense") && (e.currentTarget.value === "Full")) {
             obj.disable = false;
             obj.disable1 = false;
             obj.expiryDate = ""
             obj.liscenseType = "Driver Liscense"
-            this.myRef.current.value = "red"
+            this.myRef.current.value = "default"
         }
     }
     render() {

@@ -31,6 +31,16 @@ form{
     width:65px;
 }
 
+/* css for usecam */
+.canvasLayer{
+    position:absolute; 
+    float: left;
+    top:107px;
+    margin-left: 234px;
+   
+  }
+  
+
 /* css for showid.jsx file //////////////////////////////////////////////// */
 
 span{
@@ -57,7 +67,7 @@ span{
     margin-bottom: 3px;
 }
 .span-your-name{
-    font-weight: 600;
+    font-weight: 550;
 
 }
 
@@ -90,7 +100,7 @@ span{
     display:block;
     margin-top: 22px;
     letter-spacing: -1px;
-    font-weight: 550;
+    font-weight: 500;
     line-height: 17px;
     
 }

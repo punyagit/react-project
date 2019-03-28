@@ -61,9 +61,9 @@ const DetailForm = ({ onChange, value, setRef }) => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="year">Expiry Date</label>
-                    <select defaultValue="red" className="custom-select" ref={setRef}
+                    <select defaultValue="default" className="custom-select" ref={setRef}
                         id="year" name="expiryDate" onChange={onChange}>
-                        <option disabled value="red" >How Many Year</option>
+                        <option disabled value="default" >How Many Year</option>
                         <option value="1">1 Year</option>
 
                         <option disabled={disable1} >2 Year</option>
