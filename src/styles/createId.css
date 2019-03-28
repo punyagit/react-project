@@ -8,8 +8,8 @@ form{
 
 .detail-view{
     
-    /* display:flex; */
-    /* flex-direction: column; */
+    display:flex; 
+    flex-direction: column;
 }   
 .id-view{
     display: block;
@@ -18,8 +18,9 @@ form{
 
 .cam-view{
     
-    display:blok;
+    display:block;
     float:left;
+    margin-left:50px;
 
     
 }
@@ -87,7 +88,7 @@ span{
 
 .span-address{
     display:block;
-    margin-top: 30px;
+    margin-top: 22px;
     letter-spacing: -1px;
     font-weight: 550;
     line-height: 17px;
@@ -104,8 +105,8 @@ span{
     letter-spacing: -1px;
 } 
 .position-detail{
-    position: fixed;
-    top:170px;
+    position: absolute;
+    top:178px;
 }
 
 .span-class-no{
@@ -147,7 +148,7 @@ span{
 }
 
 .date-birth{
-    position:fixed;
+    position: absolute;
     top: 235px;
     margin-left:145px;
 }

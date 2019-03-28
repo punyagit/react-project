@@ -14,13 +14,8 @@ const ShowId = ({ value }) => {
     let newExpiryDate = Util.expiryDate(parseInt(value.expiryDate))
 
     let color = (value.liscenseType === "Provisional Driver Liscense") ? "#ff6666" : "yellow"
-
-
     return (
-
         < div id="show-id"  >
-
-
             <div className="top" style={{ backgroundColor: color }}>
                 <span className="head-span" >{value.liscenseType}</span>
 
@@ -33,7 +28,6 @@ const ShowId = ({ value }) => {
                         <span>{(value.unitNo === "") ? "" : `UNIT ${value.unitNo}`}</span>
                         <span>{value.address}</span>
                         <span>{value.city} {value.state} {value.postCode}</span>
-
                     </span>
                     <div className="position-detail">
                         <span className="span-name1 name1">Liscence No</span>
@@ -68,16 +62,9 @@ const ShowId = ({ value }) => {
                         </span>
                     </div>
 
-
-
                 </div>
 
-
-
-
-
             </div>
-
 
         </div >);
 }

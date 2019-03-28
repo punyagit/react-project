@@ -7,6 +7,7 @@ import '../../styles/createId.css'
 class CreateId extends Component {
 
     state = {
+        active: false,
         detail: {
 
             liscenseType: "Create Driver Liscense",
@@ -25,6 +26,10 @@ class CreateId extends Component {
     }
 
     myRef = React.createRef()
+
+    handleClick = () => {
+        this.setState({ active: true })
+    }
 
     handleChange = e => {
 
@@ -74,7 +79,10 @@ class CreateId extends Component {
 
                     </div>
                     <div className="cam-view">
-                        <UseCam />
+                        {this.state.active && <UseCam />}
+                        {!this.state.active && <button type="button" className="btn btn-primary" onClick={this.handleClick} disabled={this.state.active}>
+                            Photo
+                        </button>}
 
                     </div>
                 </div>

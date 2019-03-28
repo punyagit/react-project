@@ -84,8 +84,6 @@ const DetailForm = ({ onChange, value, setRef }) => {
                     </select>
 
                 </div>
-                <br />
-                <button className="btn btn-primary">Take Photo</button>
 
             </form>
 

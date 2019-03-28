@@ -4,16 +4,6 @@ import React, { Component } from 'react'
 import '../../App.css'
 
 export default class UseCam extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            videoSrc: "",
-
-
-        }
-    }
-
-
 
     componentDidMount(b) {
 
@@ -41,39 +31,33 @@ export default class UseCam extends Component {
                 });
         }
 
-        let canvas = document.getElementById('canvasLayer')
+        let canvas = this.refs.canvasLayer
         let video = document.getElementById('myVideo')
         let context = canvas.getContext('2d')
         document.getElementById('capture').addEventListener('click', function () {
 
-            let imageCanvas = context.drawImage(video, 0, 0, 180, 220);
-            var dataURL = canvas.toDataURL()
-            //console.log(dataURL)
+            context.drawImage(video, 0, 0, 90, 130);
+            var image = canvas.toDataURL("image/png")
+            //window.location.href = image;
+
         })
 
     }
 
     render() {
-        console.log(this.state.videoSrc)
         return (
             <div>
                 <div className="container">
                     <div className="videoLayer">
-                        <video loop autoPlay width="350" height="320" id="myVideo" preload="true" type="video/webm"></video>
+                        <video loop autoPlay width="350" ref="myVideo" height="320" id="myVideo" preload="true" type="video/webm"></video>
                     </div>
-                    <div>
-                        <canvas id="canvasLayer" width="180" height="220" className="canvasLayer"></canvas>
-                        <a href="#" id="capture" className="booth-capture-button">Take Photo</a>
-                    </div>
+                    <button class="btn btn-success" id="capture"> Take Photo</button>
                 </div>
+                <div>
+                    <canvas ref="canvasLayer" id="canvasLayer" width="90" height="130" className="canvasLayer"></canvas>
 
-
-
+                </div>
             </div >
-
-
-
-
 
         )
     }
