@@ -135,7 +135,7 @@ span{
 }
 
 .rhs-date{
-    float:left;    
+    
     float: right;
     text-align: center;
     width: 95px;
@@ -154,13 +154,14 @@ span{
 .right-side{
     margin-left: 33px;
     float:right;
-    max-width:100px;
+    max-width:120px;
 }
 
 .date-birth{
     position: absolute;
     top: 235px;
     margin-left:145px;
+    min-width:100px;
 }
 .birth-detail{
     font-weight: bold;

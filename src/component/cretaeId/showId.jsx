@@ -30,7 +30,7 @@ const ShowId = ({ value }) => {
                         <span>{value.city} {value.state} {value.postCode}</span>
                     </span>
                     <div className="position-detail">
-                        <span className="span-name1 name1">Liscence No</span>
+                        <span className="span-name1">Liscence No</span>
                         <span className="span-class-no">21436579</span>
                         <span className="span-name1">Liscence Class</span>
                         <span className="span-class-no">C</span>
