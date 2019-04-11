@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import Fifteen from './component/gameOfFIfteen/fifteen';
 import CreateId from './component/cretaeId/createId'
 class App extends Component {
