@@ -92,6 +92,7 @@ span{
 }
 
 .left-side {
+    position: relative;
     margin-left:3px;
     width: 200px;
 }
@@ -116,7 +117,7 @@ span{
 } 
 .position-detail{
     position: absolute;
-    top:178px;
+    top:98px;
 }
 
 .span-class-no{
@@ -159,7 +160,7 @@ span{
 
 .date-birth{
     position: absolute;
-    top: 235px;
+    top: 155px;
     margin-left:145px;
     min-width:100px;
 }

@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import Fifteen from './component/gameOfFIfteen/fifteen';
-import CreateId from './component/cretaeId/createId'
+import Navigation from './component/navigation';
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <div>
-          {/* <Fifteen /> */}
-        </div>
-        <div>
-          <CreateId />
+        <Navigation />
 
-        </div>
 
       </div>
     );
