@@ -30,7 +30,7 @@ class UseCam extends Component {
 
     render() {
         return (
-            <div>
+            <div className="web-cam">
                 <div className="container">
                     <div className="videoLayer">
                         <video loop autoPlay width="350" ref="myVideo" height="320" id="myVideo" preload="true" type="video/webm"></video>
