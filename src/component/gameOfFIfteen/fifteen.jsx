@@ -52,7 +52,6 @@ class Fifteen extends Component {
         return (
             <div id="main">
                 <div className="top">
-                    < p><a href="https://github.com/PunyaChapagain/react-project.git" target="blank">Github </a></p>
 
                     <h1> Game of Fifteen</h1>
                     <h1>{this.state.decison}</h1>
