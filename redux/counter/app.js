@@ -1,3 +1,5 @@
+
+// own reduces which work as a reducer from redux
 function reducer(state, action) {
     if (action.type === 'INCREMENT') {
         return state + action.amount;
@@ -8,19 +10,43 @@ function reducer(state, action) {
     else { return state; }
 }
 
+
+
+
+// own createStore which work similar to redux one
+
+function createStore(reducer) {
+    let state = 0;
+    const getState = () => (state);
+    const dispatch = (action) => {
+        state = reducer(state, action)
+    }
+
+    return {
+        getState,
+        dispatch,
+    }
+}
+
+const store = createStore(reducer)
+
 const incrementAction = {
     type: 'INCREMENT',
-    amount: 7
-};
-const decrementAction = {
-    type: 'DECREMENT',
     amount: 3
 }
 
-console.log(reducer(0, incrementAction));
-console.log(reducer(1, incrementAction));
-console.log(reducer(5, incrementAction));
+store.dispatch(incrementAction)
+console.log(store.getState())
+store.dispatch(incrementAction)
+console.log(store.getState())
+store.dispatch(incrementAction)
+console.log(store.getState())
 
-const unknownAction = { type: 'UNKNOWN' };
-console.log(reducer(5, decrementAction));
-console.log(reducer(8, unknownAction)); 
+const decrementAction = {
+    type: 'DECREMENT',
+    amount: 4
+}
+
+store.dispatch(decrementAction)
+console.log(store.getState())
+
