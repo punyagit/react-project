@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import Utils from '../../utility/util'
 import '../../styles/cardGame.css'
-import ReactDOM from 'react-dom';
-
 
 class CardGame extends Component {
     state = {
-        player1: [],
-        player1: [],
-        player1: [],
-        player1: [],
-
+        arrays: []
     }
     componentDidMount() {
-
+        this.loadImage()
 
     }
 
@@ -24,39 +18,7 @@ class CardGame extends Component {
         "CIC.png", "DID.png", "HIH.png", "SIS.png", "CJC.png", "DJD.png", "HJH.png", "SJS.png", "CQC.png", "DQD.png", "HQH.png", "SQS.png",
         "CRC.png", "DRD.png", "HRH.png", "SRS.png"];
 
-
-
-
     newShuffleCard = Utils.shuffleArray(this.arrayOfCard)
-
-
-    // sortAndDisplayCard(array, id) {
-
-    //     let image;
-
-    //     array.sort();
-
-    //     for (let i = 0; i < array.length; i++) {
-
-    //         image = React.createElement("img", {
-    //             src: require("./image/" + array[i]),
-
-    //             style: {
-    //                 width: 100,
-    //                 height: 130,
-    //                 marginLeft: 150
-    //             }
-    //         })
-
-
-    //         // this.setState({ card: image })
-
-
-    //         // myImg.addEventListener("mouseover", this.scaleUp);
-    //         // myImg.addEventListener("mouseout", this.scaleDown);
-
-    //     }
-    // }
 
     loadImage = () => {
 
@@ -72,57 +34,53 @@ class CardGame extends Component {
             if (distCard === 3) player3.push(this.newShuffleCard[i]);
             if (distCard === 3) player4.push(this.newShuffleCard[i]);
         }
+        player1.sort();
+        player2.sort();
+        player3.sort();
+        player4.sort();
+        let arrays = [player1, player2, player3, player4];
 
-        this.sortAndDisplayCard(player1, "player1");
-        // this.sortAndDisplayCard(player2, "player2");
-        // this.sortAndDisplayCard(player3, "player3");
-        // this.sortAndDisplayCard(player4, "player4");
+        this.setState({ arrays });
+
     };
 
 
-    // scaleUp(e) {
-    //     let x = e.currentTarget;
-    //     x.style.transform = "scale(1.1)";
-    // }
+    scaleUp(e) {
+        let x = e.currentTarget;
+        x.style.transform = "scale(1.1)";
+    }
 
-    // scaleDown(e) {
-    //     let x = e.currentTarget;
-    //     x.style.transform = "scale(1)";
-    // }
+    scaleDown(e) {
+        let x = e.currentTarget;
+        x.style.transform = "scale(1)";
+    }
 
 
 
 
 
     render() {
-
-
-        console.log(this.state.value)
-
         return (
             <div id="card-holder">
+                {this.state.arrays.map((array, key) => {
+                    return <div key={key} id={"player" + (1 + key)} >
+                        {array.map((value, keys) => {
+                            return (
+                                <React.Fragment key={keys}>
+                                    <img src={require('./image/' + value)}
+                                        style={{ width: 100, height: 130, marginLeft: keys * 14 }}
+                                        onMouseEnter={this.scaleUp} onMouseLeave={this.scaleDown} />
 
-                <div id="player1">
-                    {
-                        this.state.array.map((number, key) => {
+                                </React.Fragment>
 
-                            return <img key={key} src={require('./image/' + number)} style={{ width: 100, height: 130, marginLeft: key * 14 }} />
-                        })
-                    }
-                    <p> Player1</p>
-                </div>
-                <div id="player2">
-                    <p> Player2</p>
-                </div>
-                <div id="player3">
-                    <p> Player3</p>
-                </div>
-                <div id="player4">
-                    <p> Player4</p>
-                </div>
+                            )
+
+                        })}
+                        <p>{"player" + (key + 1)}</p>
+                    </div>
+
+                })}
                 <div id="center"></div>
-
-
 
             </div >
         );
