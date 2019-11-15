@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 /redux/counter/node_modules
+/redux/counter/chat_simple/node_modules
+
 # testing
 /coverage
 
