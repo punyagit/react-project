@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Utils from '../../utility/util'
-import '../../styles/gameOfFifteen.css'
+import Utils from '../../utility/util';
+import '../../styles/gameOfFifteen.css';
 
 class Fifteen extends Component {
     state = {
@@ -8,7 +8,7 @@ class Fifteen extends Component {
         decison: ""
 
 
-    }
+    };
     // to add 0 at the end so it doesn't shuffle
     componentDidMount() {
         let newArray = this.state.array

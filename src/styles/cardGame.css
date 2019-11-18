@@ -13,7 +13,6 @@ body{
 #card-holder div{
     min-width:350px;
     min-height: 160px;
-    /* background-color: greenyellow; */
     
 }
 
@@ -55,10 +54,11 @@ position: absolute;
 
 }
 
-img{
+
+.card-image{
     position: absolute;
 }
-p{
+.player-name{
     position: absolute;
     left: 100px;
     bottom: -5px;
