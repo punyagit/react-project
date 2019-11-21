@@ -26,19 +26,19 @@ position: absolute;
     top:284px;
     left:6px;
 }
-
 #player3{
-    position: absolute;
-    left:626px;
-    top:284px;
-}
-
-#player4{
     position: absolute;
     bottom:0px;
     left: 322px;
 
 }
+
+#player4{
+    position: absolute;
+    left:626px;
+    top:284px;
+}
+
 
 #center{
     position: absolute;
@@ -63,5 +63,12 @@ position: absolute;
     background-color: silver;
 }
 
+.error-display{
+    background-color: rgb(199, 87, 87);
+    margin-left: 35px; 
+    margin-top:-30px;
+    color:blue;
+    font-size: 18px;
+}
 
 

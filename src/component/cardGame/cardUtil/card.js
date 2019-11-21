@@ -17,7 +17,7 @@ const loadImage = () => {
     let distCard = i % 4;
     if (distCard === 0) player1.push(arrayOfShuffleCard[i]);
     if (distCard === 1) player2.push(arrayOfShuffleCard[i]);
-    if (distCard === 3) player3.push(arrayOfShuffleCard[i]);
+    if (distCard === 2) player3.push(arrayOfShuffleCard[i]);
     if (distCard === 3) player4.push(arrayOfShuffleCard[i]);
   }
   player1.sort();
@@ -29,11 +29,10 @@ const loadImage = () => {
   // this.setState({ arrays });
 };
 
-const checkArray = (arraysOfPlayer, arrayClicked) => {
+const checkArray = (arraysOfPlayer, arrayClicked, message) => {
   let findMaxCardInArray = Math.max(...arraysOfPlayer.map((array) => array.length))
   let cardInClickedArray = arraysOfPlayer[arrayClicked].length
   if (findMaxCardInArray === cardInClickedArray) return true
-  alert("Click different set of card")
 }
 
 export { loadImage, checkArray };

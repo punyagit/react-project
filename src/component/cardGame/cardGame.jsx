@@ -7,7 +7,8 @@ class CardGame extends Component {
         arraysOfPlayer: [],
         imageSrc: '',
         holdClickedCard: [],
-        cardCount: 0
+        error: ''
+
     }
     componentDidMount() {
         const arraysOfPlayer = loadImage();
@@ -26,24 +27,28 @@ class CardGame extends Component {
 
 
     onCardClick = (e) => {
+        if (this.state.error !== '') this.setState({ error: '' })
         let holdClickedCard = this.state.holdClickedCard;
         let arraysOfPlayer = this.state.arraysOfPlayer
         let arrayClicked = Number(e.currentTarget.id);
+        const errorMessage = `   player${arrayClicked + 1} has already thown his card`
         let value = checkArray(arraysOfPlayer, arrayClicked);
         if (value) {
             let valueToRemove = e.currentTarget.name
             const filteredItems = arraysOfPlayer[arrayClicked].filter(function (item) {
                 return item !== valueToRemove
-            })
+            });
             arraysOfPlayer[arrayClicked] = filteredItems;
-            holdClickedCard.push(valueToRemove)
-            this.setState({ holdClickedCard })
-            this.setState({ arraysOfPlayer })
+            holdClickedCard.push(valueToRemove);
+            this.setState({ holdClickedCard });
+            this.setState({ arraysOfPlayer });
             if (holdClickedCard.length === 4) setTimeout(function () {
                 this.setState({ holdClickedCard: [] });
             }.bind(this),
                 300);
         }
+
+        else this.setState({ error: errorMessage });
 
     }
 
@@ -69,6 +74,7 @@ class CardGame extends Component {
 
                 })}
                 <div id='center'>
+                    <p className="error-display" >{this.state.error}</p>
                     {this.state.holdClickedCard.map((value, key) => {
                         return <img key={key} src={require(`./image/${value}`)} name={value} id={key}
                             style={{ width: 100, height: 130, marginLeft: (key * 64) || 30, marginTop: (key * 44) || 65 }}

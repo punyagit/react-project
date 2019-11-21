@@ -35,7 +35,7 @@ class UseCam extends Component {
                     <div className="videoLayer">
                         <video loop autoPlay width="350" ref="myVideo" height="320" id="myVideo" preload="true" type="video/webm"></video>
                     </div>
-                    <button class="btn btn-success" id="capture" onClick={this.capturePicture}> Take Photo</button>
+                    <button className="btn btn-success" id="capture" onClick={this.capturePicture}> Take Photo</button>
                 </div>
                 <div>
                     <canvas ref="canvasLayer" id="canvasLayer" width="90" height="130" className="canvasLayer"></canvas>
