@@ -29,5 +29,12 @@ const loadImage = () => {
   // this.setState({ arrays });
 };
 
-export default loadImage;
+const checkArray = (arraysOfPlayer, arrayClicked) => {
+  let findMaxCardInArray = Math.max(...arraysOfPlayer.map((array) => array.length))
+  let cardInClickedArray = arraysOfPlayer[arrayClicked].length
+  if (findMaxCardInArray === cardInClickedArray) return true
+  alert("Click different set of card")
+}
+
+export { loadImage, checkArray };
 // export default arrayOfShuffleCard;

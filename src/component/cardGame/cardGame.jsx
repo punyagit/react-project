@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import '../../styles/cardGame.css';
-import loadImage from './cardUtil/card.js';
+import { loadImage, checkArray } from './cardUtil/card.js';
 
 class CardGame extends Component {
     state = {
-        arrays: [],
+        arraysOfPlayer: [],
         imageSrc: '',
-        arrayCard: [],
+        holdClickedCard: [],
         cardCount: 0
     }
     componentDidMount() {
-        const arrays = loadImage();
-        this.setState({ arrays })
+        const arraysOfPlayer = loadImage();
+        this.setState({ arraysOfPlayer })
     }
-
-
-
 
     scaleUp = (e) => {
         let x = e.currentTarget;
@@ -27,29 +24,34 @@ class CardGame extends Component {
         x.style.transform = 'scale(1)';
     }
 
+
     onCardClick = (e) => {
-        let arrayCard = this.state.arrayCard;
-        let arrays = this.state.arrays
+        let holdClickedCard = this.state.holdClickedCard;
+        let arraysOfPlayer = this.state.arraysOfPlayer
         let arrayClicked = Number(e.currentTarget.id);
-        let valueToRemove = e.currentTarget.name
-        const filteredItems = arrays[arrayClicked].filter(function (item) {
-            return item !== valueToRemove
-        })
-        arrays[arrayClicked] = filteredItems;
-        arrayCard.push(valueToRemove)
-        this.setState({ arrayCard })
-        this.setState({ arrays })
-        if (arrayCard.length === 4) setTimeout(function () {
-            this.setState({ arrayCard: [] });
-        }.bind(this),
-            300);
+        let value = checkArray(arraysOfPlayer, arrayClicked);
+        if (value) {
+            let valueToRemove = e.currentTarget.name
+            const filteredItems = arraysOfPlayer[arrayClicked].filter(function (item) {
+                return item !== valueToRemove
+            })
+            arraysOfPlayer[arrayClicked] = filteredItems;
+            holdClickedCard.push(valueToRemove)
+            this.setState({ holdClickedCard })
+            this.setState({ arraysOfPlayer })
+            if (holdClickedCard.length === 4) setTimeout(function () {
+                this.setState({ holdClickedCard: [] });
+            }.bind(this),
+                300);
+        }
+
     }
 
     render() {
 
         return (
             <div id='card-holder'>
-                {this.state.arrays.map((array, key) => {
+                {this.state.arraysOfPlayer.map((array, key) => {
                     return <div key={key} id={'player' + (1 + key)} >
                         {array.map((value, keys) => {
                             return (
@@ -67,7 +69,7 @@ class CardGame extends Component {
 
                 })}
                 <div id='center'>
-                    {this.state.arrayCard.map((value, key) => {
+                    {this.state.holdClickedCard.map((value, key) => {
                         return <img key={key} src={require(`./image/${value}`)} name={value} id={key}
                             style={{ width: 100, height: 130, marginLeft: (key * 64) || 30, marginTop: (key * 44) || 65 }}
                             onMouseEnter={this.scaleUp} onMouseLeave={this.scaleDown}
