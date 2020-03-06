@@ -1,5 +1,6 @@
 {
   "projects": {
-    "react-project": "game-of-fifteen-6bb9e"
+    "react-project": "game-of-fifteen-6bb9e",
+    "default": "game-of-fifteen-6bb9e"
   }
 }
