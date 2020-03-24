@@ -3,6 +3,7 @@ import Fifteen from './gameOfFIfteen/fifteen';
 import CreateId from './cretaeId/createId';
 import CardGame from './cardGame/cardGame';
 import GameFiftyTwo from './gameOf52';
+import GuessNext from './guessNext';
 
 import id from '../styles/id.png';
 import fifteen from '../styles/fiffteen.png';
@@ -51,7 +52,7 @@ class Navigation extends Component {
                 case 'card':
                   return <CardGame />;
                 default:
-                  return <GameFiftyTwo />;
+                  return <GuessNext />;
               }
             })()}
 
